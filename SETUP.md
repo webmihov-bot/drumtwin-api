@@ -10,8 +10,8 @@ Get from clone to running locally in under 5 minutes.
 ## Local setup
 
 ```bash
-git clone https://github.com/drumtwin/api.git
-cd api
+git clone https://github.com/webmihov-bot/drumtwin-api.git
+cd drumtwin-api
 npm install
 npm start
 ```
@@ -56,7 +56,7 @@ Railway picks up `railway.toml` automatically. The deploy config:
 
 Railway requires a GitHub connection. To link:
 
-1. Push this repo to GitHub (e.g. `github.com/drumtwin/api`)
+1. Push this repo to GitHub (`github.com/webmihov-bot/drumtwin-api`)
 2. Create a Railway project at https://railway.app/new
 3. Connect the GitHub repo — Railway auto-deploys on every `main` push
 4. Copy the generated Railway URL and record it below
