@@ -61,7 +61,7 @@ Railway requires a GitHub connection. To link:
 3. Connect the GitHub repo — Railway auto-deploys on every `main` push
 4. Copy the generated Railway URL and record it below
 
-**Live URL**: _pending Railway project creation_
+**Live URL**: https://api-production-99f76.up.railway.app
 
 Once connected, all subsequent deploys are fully automated via git push.
 
