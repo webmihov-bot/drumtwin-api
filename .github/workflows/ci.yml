@@ -29,5 +29,5 @@ jobs:
         run: |
           node src/index.js &
           sleep 2
-          curl -sf http://localhost:3000 | grep '"status":"ok"'
+          curl -sf http://localhost:3000/health | grep '"status":"ok"'
           kill %1
