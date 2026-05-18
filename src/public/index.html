@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DrumTwin – AI Services</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">DrumTwin<span class="dot">.</span></a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>AI services<br/>built to last.</h1>
+      <p class="subtitle">We automate, fine-tune, and host AI so your business moves faster — without locking you into a black box.</p>
+      <a href="#services" class="btn">Explore services</a>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">What we build and run for you.</p>
+      <div class="grid" id="project-grid">
+        <div class="card skeleton"></div>
+        <div class="card skeleton"></div>
+        <div class="card skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section id="about" class="section alt">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>Who we are</h2>
+        <p>DrumTwin Ltd. is an AI-first company operated entirely by autonomous agents — engineering, strategy, and delivery all run on AI. We eat our own cooking: every service we offer, we run for ourselves first.</p>
+        <p>We help individuals and businesses adopt the AI stack that's right for them — from a single workflow automation to a full local AI deployment with custom-trained models.</p>
+        <p>No fluff. No lock-in. Reproducible, observable, and yours to own.</p>
+      </div>
+      <div class="about-badges">
+        <div class="badge">AI-First</div>
+        <div class="badge">Open Source</div>
+        <div class="badge">Local-First</div>
+        <div class="badge">No Lock-In</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="section">
+    <div class="container contact-inner">
+      <h2>Ready to start?</h2>
+      <p>Tell us what you're trying to automate or build. We'll come back with a concrete plan.</p>
+      <a href="mailto:hello@drumtwin.com" class="btn">Get in touch</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© 2026 DrumTwin Ltd.</span>
+      <a href="/admin.html" class="admin-link">Admin</a>
+    </div>
+  </footer>
+
+  <script>
+    async function loadProjects() {
+      const grid = document.getElementById('project-grid');
+      try {
+        const res = await fetch('/api/projects');
+        const projects = await res.json();
+        grid.innerHTML = projects.map(p => `
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">${esc(p.name)}</h3>
+              <span class="badge-status ${p.status === 'active' ? 'active' : 'soon'}">
+                ${p.status === 'active' ? 'Active' : 'Coming soon'}
+              </span>
+            </div>
+            <p class="card-desc">${esc(p.description)}</p>
+            ${p.tags.length ? `<div class="tags">${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
+          </div>
+        `).join('');
+      } catch {
+        grid.innerHTML = '<p class="error">Could not load services. Please refresh.</p>';
+      }
+    }
+
+    function esc(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    loadProjects();
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "name": "n8n Workflow Automation",
+    "description": "Custom n8n automation pipelines connecting your tools, APIs, and AI models — no-code to full-code, deployed and maintained for you.",
+    "status": "active",
+    "tags": [
+      "automation",
+      "n8n",
+      "workflow"
+    ],
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "AI Tool Configuration (OpenClaw)",
+    "description": "End-to-end setup and fine-tuning of AI agent toolchains — prompt engineering, tool wiring, and orchestration via OpenClaw and compatible frameworks.",
+    "status": "active",
+    "tags": [
+      "ai",
+      "openclaw",
+      "configuration"
+    ],
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "name": "Local AI Hardware Hosting",
+    "description": "Self-hosted open-source model deployment on dedicated hardware — Ollama, llama.cpp, and friends. Your data stays local, costs stay low.",
+    "status": "active",
+    "tags": [
+      "local-ai",
+      "ollama",
+      "hardware"
+    ],
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "name": "LoRA Fine-Tuning & RAG Pipelines",
+    "description": "Custom model adaptation via LoRA fine-tuning and Retrieval-Augmented Generation — train on your data, serve with your infrastructure.",
+    "status": "active",
+    "tags": [
+      "lora",
+      "rag",
+      "fine-tuning"
+    ],
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "name": "Personal & Business AI Consulting",
+    "description": "Strategic AI advisory for individuals and businesses — from choosing the right model to architecting a full AI-first workflow stack.",
+    "status": "active",
+    "tags": [
+      "consulting",
+      "strategy",
+      "advisory"
+    ],
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "id": "6",
+    "name": "AI Agent Marketplace",
+    "description": "A curated catalogue of pre-built AI agents you can deploy in minutes — purpose-built for common business workflows.",
+    "status": "coming_soon",
+    "tags": [
+      "agents",
+      "marketplace"
+    ],
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  }
+]
